@@ -1,0 +1,114 @@
+body{
+    font-family: 'Libre Franklin';
+    background: #d7f7f4;
+}
+
+/*.mycontent{
+    margin-top: 25px;
+
+}
+#delete_button{
+    margin-left: 20px !important;
+}
+
+.container-form-search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-primary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.comment-text{
+    margin:auto
+}
+.comment-user{
+    margin:auto
+}
+.comment{
+    margin: auto;
+}
+.comment-container{
+    box-shadow: 10px 15px 28px 0px rgba(0, 0, 0, 0.1);
+    background-color: #f0d4d8;
+    padding:20px;
+    border-radius: 10px;
+    
+}
+.comment-submit{
+    margin-top:2px;
+}
+*/
+
+nav {
+    background-color: #172829;
+    color: white;   
+    display:flex;
+    justify-content: space-between;
+    padding: 1px 26px;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgba(128, 128, 128, 0.134);
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar{
+    display:flex;
+}
+
+li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for background-color and box-shadow */
+}
+
+li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    margin-right: 30px;
+}
+
+li:hover {
+    background-color: rgba(131, 194, 197, 0.2); /* Change background color on hover */
+    box-shadow: 0 0 10px rgba(131, 194, 197, 0.7); /* Add a glowing effect on hover */
+}
+
+li:hover a {
+    color: rgb(131, 194, 197); /* Change text color on hover */
+    font-weight: 1000; /* Change font-weight on hover */
+}
+.navbar-brand{
+    text-decoration: none;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: white;
+}
+
+.mybutton{
+    color: #172829;
+    background-color: #d7f7f4;
+    box-shadow: 10px 10px 15px rgba(128, 128, 128, 0.134);
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    align-self: center;
+}
+
+.mybutton:hover{
+    background-color: #172829;
+    color: white;
+    font-weight: 500;
+}

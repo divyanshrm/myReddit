@@ -1,0 +1,43 @@
+{% extends "posts/post_base.html" %}
+{% load bootstrap5 %}
+{% block post_content %}
+<div class="col-md-8">
+    {% include "posts/_post.html" %}
+</div>
+
+<div>
+    <span>{{ post.total_likes }} Likes</span>
+    <span>{{ post.total_dislikes }} Dislikes</span>
+    {% if user.is_authenticated%}
+    <!-- Like/Dislike buttons -->
+        <a href="{% url 'posts:like_post' username=post.user.username pk=post.pk %}">Like</a>
+        <a href="{% url 'posts:dislike_post' username=post.user.username pk=post.pk %}">Dislike</a>
+    {% endif %}
+</div>
+<div class="comment-container">
+{% if user.is_authenticated%}
+
+<form method="post" action="{% url 'posts:add_comment' username=post.user.username pk=post.pk %}">
+    {% csrf_token %}
+    {% bootstrap_form comment_form %}
+    <button type="submit" class="btn-primary comment-submit">Submit</button>
+</form>
+{% endif %}
+
+
+{% for comment in comments %}
+    <div class="comment">
+        <p class="comment-text">{{ comment.content }}</p>
+        <p class="comment-user"> by<span class="username"><a href="{% url 'posts:for_user' username=comment.user.username %}"> @{{ comment.user.username }}</a> on <small>{{ post.created_at|date:"F j, Y"  }}</small></span></p>
+        
+        {% if comment.user == request.user %}
+            <button type="submit" class="btn btn-secondary btn-sm delete-comment"><a href="{% url 'posts:comment_delete' username=comment.post.user.username postpk=comment.post.pk pk=comment.pk %}">Delete</a></button>
+        {% endif %}
+    </div>
+
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
