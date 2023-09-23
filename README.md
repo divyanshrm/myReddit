@@ -14,14 +14,6 @@ myReddit aims to capture the spirit and functionality of Reddit, tailored to a b
   
 - **💬 Augment Discussions:** Engage in meaningful conversations using a seamless and structured commenting system.
 
-## 📖 Table of Contents
-
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Testing](#-testing)
-- [Contribute](#-contribute)
-- [License](#-license)
 
 ## 🌟 Features
 
